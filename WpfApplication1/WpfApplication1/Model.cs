@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -60,9 +61,9 @@ namespace WpfApplication1
             this.Realize = SetText(Realize);
         }
 
-        public static List<Model> GetDataTableRow(DataTable result)
+        public static BindingList<Model> GetDataTableRow(DataTable result)
         {
-            List<Model> lstModel = new List<Model>();
+            BindingList<Model> lstModel = new BindingList<Model>();
             foreach (DataRow rows in result.Rows)
             {
                 string name = Convert.ToString(rows[0]);

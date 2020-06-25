@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
@@ -35,6 +36,8 @@ namespace WpfApplication1
 
         }
 
+       // private BindingList <Model> ToDoData;
+        
        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -44,7 +47,7 @@ namespace WpfApplication1
             if (openFileDialog.ShowDialog() == true)
             { 
                 var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read);
-                List<Model> lstModel ;
+                BindingList<Model> lstModel ;
                 if (openFileDialog.FileName.Contains(".xlsx"))
                 // В зависимости от расширения файла Excel, создаем тот или иной читатель.
                 // https://github.com/ExcelDataReader/ExcelDataReader#readme
@@ -73,8 +76,8 @@ namespace WpfApplication1
                    
                 }
                 // у нас есть лист с первой страницей, теберь ее нужно вывести на экран в первфый таб - Рента
-              
-                
+
+                dgRENTA.ItemsSource = lstModel;
 
 
 

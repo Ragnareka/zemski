@@ -57,25 +57,28 @@
                     <Grid >
                         <DataGrid x:Name = "dgRENTA" FontWeight="Bold" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Показатель\Район"/>
-                                <DataGridTextColumn Header="Площадь посеянная"/>
-                                <DataGridTextColumn Header="Площадь убранная"/>
-                                <DataGridTextColumn Header="Затраты всего"/>
-                                <DataGridTextColumn Header="Затраты на оплату труда"/>
-                                <DataGridTextColumn Header="Затраты на семена"/>
-                                <DataGridTextColumn Header="Затраты на элитные семена"/>
-                                <DataGridTextColumn Header="Минеральные удобрения"/>
-                                <DataGridTextColumn Header="Органические удобрения"/>
-                                <DataGridTextColumn Header="Затраты на средства защиты"/>
-                                <DataGridTextColumn Header="Затраты на электроэнергию"/>
-                                <DataGridTextColumn Header="Затраты на нефтепродукты"/>
-                                <DataGridTextColumn Header="Затраты на страхование"/>
-                                <DataGridTextColumn Header="Содержание основных средств"/>
-                                <DataGridTextColumn Header="Выход продукции всего"/>
-                                <DataGridTextColumn Header="Выход продукции на 1 га" IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Себестоимость всего"/>
-                                <DataGridTextColumn Header="Себестоимость на 1 га"  IsReadOnly="True"/>
+                                <DataGridTextColumn Binding="{Binding Path = name }" Header="Показатель\Район"/>
+                                <DataGridTextColumn Binding="{Binding Path =  Sposev }" Header="Площадь посеянная"/>
+                                <DataGridTextColumn Binding="{Binding Path = Subr }" Header="Площадь убранная"/>
+                                <DataGridTextColumn Binding="{Binding Path = ALLmoney }" Header="Затраты всего"/>
+                                <DataGridTextColumn Binding="{Binding Path =  moneyTR }" Header="Затраты на оплату труда"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneySemena }" Header="Затраты на семена"/>
+                                <DataGridTextColumn Binding="{Binding Path =  moneySemenaElit }" Header="Затраты на элитные семена"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneyUdobMin }" Header="Минеральные удобрения"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneyUdobOrg }" Header="Органические удобрения"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneySave }" Header="Затраты на средства защиты"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneyElecticity }" Header="Затраты на электроэнергию"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneyOIL }" Header="Затраты на нефтепродукты"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneyStrahovka }" Header="Затраты на страхование"/>
+                                <DataGridTextColumn Binding="{Binding Path = moneyOsnov }" Header="Содержание основных средств"/>
+                                <DataGridTextColumn Binding="{Binding Path = Product }" Header="Выход продукции всего"/>
+
+                                <DataGridTextColumn Binding="{Binding Path =  Price }" Header="Себестоимость всего"/>
+                                <DataGridTextColumn Binding="{Binding Path = Realize }" Header="Реализовано"/>
+                                <DataGridTextColumn Binding="{Binding Path = AllVolumePrice }" Header="Себестоимость реализованной продукции"/>
+                                <DataGridTextColumn Binding="{Binding Path = VolumeProd }" Header="Выручено"/>
                             </DataGrid.Columns>
+                                  
 
                         </DataGrid>
                     </Grid>
@@ -113,7 +116,7 @@
 
             <Grid>
 
-                <StackPanel Name="MENU" Grid.Column="0" Width="78" HorizontalAlignment="Left">
+                <StackPanel Name="MENU" Grid.Column="0" Width="75" HorizontalAlignment="Left">
 
                     <Button Click="Button_Click" Height="40" >
                         <TextBlock Text="Новый проект"

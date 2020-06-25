@@ -22,3 +22,11 @@ C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplic
 C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
 C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.csproj.GenerateResource.cache
 C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\bin\Debug\ExcelDataReader.dll
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\bin\Debug\ExcelDataReader.pdb
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\bin\Debug\ExcelDataReader.xml
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\Maria\OneDrive\Документы\mko-zemskhi\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.csproj.CopyComplete
