@@ -2,86 +2,108 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="ProgramName" Height="350" Width="525">
-  
-    <StackPanel>
-        
 
-        <TabControl  Name="tabControl1" >
-            <TabItem Header="tabItem1" Name="tabItem1">
+    <Grid>
 
-                <Grid >
-                    <DataGrid x:Name = "dgRENTA" FontWeight="Bold" >
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Показатель\Район">
+        <StackPanel Margin="25 0 0 0">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Площадь посеянная">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Площадь убранная">
+            <TabControl  Name="tabControl1" >
+                <TabItem Header="tabItem1" Name="tabItem1">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты всего">
+                    <Grid >
+                        <DataGrid x:Name = "dgRENTA" FontWeight="Bold" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Показатель\Район">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты на оплату труда">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Площадь посеянная">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты на семена">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Площадь убранная">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты на элитные семена">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты всего">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Минеральные удобрения">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты на оплату труда">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Органические удобрения">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты на семена">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты на средства защиты">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты на элитные семена">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты на электроэнергию">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Минеральные удобрения">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты на нефтепродукты">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Органические удобрения">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Затраты на страхование">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты на средства защиты">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Содержание основных средств">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты на электроэнергию">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Выход продукции всего">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты на нефтепродукты">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Выход продукции на 1 га" IsReadOnly="True">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Затраты на страхование">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Себестоимость всего">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Содержание основных средств">
 
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Себестоимость на 1 га"  IsReadOnly="True">
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Выход продукции всего">
 
-                            </DataGridTextColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Выход продукции на 1 га" IsReadOnly="True">
+
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Себестоимость всего">
+
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Себестоимость на 1 га"  IsReadOnly="True">
+
+                                </DataGridTextColumn>
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="tabItem2" Name="tabItem2">
+                    <Grid>
+                        <DataGrid x:Name = "dgRENTA2" FontWeight="Bold">
+
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+            <WrapPanel>
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox >Коэффициент</TextBox>
+                    <TextBox Name="Коэффициент" Grid.Column="1" >0,002</TextBox>
+
                 </Grid>
-            </TabItem>
-        </TabControl>
-        <WrapPanel>
-            <Grid Margin="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBox >Коэффициент</TextBox>
-            <TextBox Name="Коэффициент" Grid.Column="1" > 0,002</TextBox>
-              
-            </Grid>
-        </WrapPanel>
-      
-    </StackPanel>
+                <Button Name="Calculate" >Пересчитать</Button>
+            </WrapPanel>
+
+        </StackPanel>
+        <Grid HorizontalAlignment="Left" Width="100" Background="DarkGray" Margin="-75 0 0 0">
+           
+            <StackPanel>
+                <Button Name ="rectangle" Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="21" Content="֍" Margin="76,0,0,0" Click="Rectangle_Click">
+
+                </Button>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
 </Window>

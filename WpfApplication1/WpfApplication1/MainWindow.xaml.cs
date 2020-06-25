@@ -23,5 +23,10 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+
+        private void Rectangle_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
