@@ -1,15 +1,13 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
+Это программа, продолжающая старую+
+ добавляет страницу "рента"* Quick summary*
 ### How do I get set up? ###
-
+требует
+framework не ниже 3.0
+visual studio 2017
+библиотеки material design, ExcelReading
 * Summary of set up
 * Configuration
 * Dependencies
@@ -18,12 +16,12 @@ This README would normally document whatever steps are necessary to get your app
 * Deployment instructions
 
 ### Contribution guidelines ###
-
+взять формы из MNTR и переписать их в WPF и чтобы файлы считывались так же как уже сделано для Ренты.
 * Writing tests
 * Code review
 * Other guidelines
 
 ### Who do I talk to? ###
-
+напишите мне на почту anna.zykova.97@mail.ru
 * Repo owner or admin
 * Other community or team contact
