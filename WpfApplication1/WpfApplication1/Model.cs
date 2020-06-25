@@ -9,25 +9,25 @@ namespace WpfApplication1
 {
     class Model
     {
-        public string name;
-        public int Sposev;
-        public int Subr;
-        public int ALLmoney;
-        public int moneyTR;
-        public int moneySemena;
-        public int moneySemenaElit;
-        public int moneyUdobMin;
-        public int moneyUdobOrg;
-        public int moneySave;
-        public int moneyElecticity;
-        public int moneyOIL;
-        public int moneyStrahovka;
-        public int moneyOsnov;
-        public int Product;
-        public int Price;
-        public int VolumeProd;
-        public int AllVolumePrice;
-        public int Realize;
+        public string name { get; set; }
+        public int Sposev { get; set; }
+        public int Subr { get; set; }
+        public int ALLmoney { get; set; }
+        public int moneyTR { get; set; }
+        public int moneySemena { get; set; }
+        public int moneySemenaElit { get; set; }
+        public int moneyUdobMin { get; set; }
+        public int moneyUdobOrg { get; set; }
+        public int moneySave { get; set; }
+        public int moneyElecticity { get; set; }
+        public int moneyOIL { get; set; }
+        public int moneyStrahovka { get; set; }
+        public int moneyOsnov { get; set; }
+        public int Product { get; set; }
+        public int Price { get; set; }
+        public int VolumeProd { get; set; }
+        public int AllVolumePrice { get; set; }
+        public int Realize { get; set; }
 
         public string GetText (int _text)
         { return (Convert.ToString(_text)); }
