@@ -1,0 +1,87 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProgramName" Height="350" Width="525">
+  
+    <StackPanel>
+        
+
+        <TabControl  Name="tabControl1" >
+            <TabItem Header="tabItem1" Name="tabItem1">
+
+                <Grid >
+                    <DataGrid x:Name = "dgRENTA" FontWeight="Bold" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Показатель\Район">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Площадь посеянная">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Площадь убранная">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты всего">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты на оплату труда">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты на семена">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты на элитные семена">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Минеральные удобрения">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Органические удобрения">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты на средства защиты">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты на электроэнергию">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты на нефтепродукты">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Затраты на страхование">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Содержание основных средств">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Выход продукции всего">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Выход продукции на 1 га" IsReadOnly="True">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Себестоимость всего">
+
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Себестоимость на 1 га"  IsReadOnly="True">
+
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <WrapPanel>
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox >Коэффициент</TextBox>
+            <TextBox Name="Коэффициент" Grid.Column="1" > 0,002</TextBox>
+              
+            </Grid>
+        </WrapPanel>
+      
+    </StackPanel>
+</Window>

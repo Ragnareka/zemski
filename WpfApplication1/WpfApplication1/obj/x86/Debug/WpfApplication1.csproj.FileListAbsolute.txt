@@ -1,0 +1,11 @@
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.baml
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\App.g.cs
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1_MarkupCompile.cache
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.g.resources
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.csproj.GenerateResource.Cache
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.exe
+C:\Users\Maria\OneDrive\Документы\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.pdb
