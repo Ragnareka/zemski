@@ -1,5 +1,9 @@
-﻿using System;
+﻿using ExcelDataReader;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -19,6 +23,8 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,5 +34,54 @@ namespace WpfApplication1
         {
 
         }
+
+       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            // Создаем поток для чтения.
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            { 
+                var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read);
+                List<Model> lstModel ;
+                if (openFileDialog.FileName.Contains(".xlsx"))
+                // В зависимости от расширения файла Excel, создаем тот или иной читатель.
+                // https://github.com/ExcelDataReader/ExcelDataReader#readme
+                // Читатель для файлов с расширением *.xlsx.
+                { var excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+                    // Читаем, получаем DataSet и работаем с ним как обычно.
+                    // var result = excelReader.AsDataSet();
+                    DataTable result = excelReader.AsDataSet().Tables[0];
+
+                     lstModel = Model.GetDataTableRow(result);
+
+                        // После завершения чтения освобождаем ресурсы.
+
+                        excelReader.Close();
+                }
+                else {
+
+                    // Читатель для файлов с расширением *.xls.
+                    var excelReader = ExcelReaderFactory.CreateBinaryReader(stream);
+                    // Читаем, получаем DataSet и работаем с ним как обычно.
+                    DataTable result = excelReader.AsDataSet().Tables[0];
+
+                    lstModel = Model.GetDataTableRow(result);
+                    // После завершения чтения освобождаем ресурсы.
+                    excelReader.Close();
+                   
+                }
+                // у нас есть лист с первой страницей, теберь ее нужно вывести на экран в первфый таб - Рента
+              
+                
+
+
+
+            }
+        
+        
+        }
+       
     }
 }

@@ -1,83 +1,88 @@
-﻿<Window x:Class="WpfApplication1.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplication1.MainWindow"
         Title="ProgramName" Height="350" Width="525">
+    <Window.Resources>
+        <Storyboard x:Key="StoryboardMENU">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="74.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-1.335"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle2">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StoryboardClose">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="73.436"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-5.007"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle2">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="rectangle">
+            <BeginStoryboard Storyboard="{StaticResource StoryboardMENU}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="rectangle2">
+            <BeginStoryboard Storyboard="{StaticResource StoryboardClose}"/>
+        </EventTrigger>
+    </Window.Triggers>
 
     <Grid>
 
-        <StackPanel Margin="25 0 0 0">
+        <StackPanel Margin="25,2,0.4,-2.2">
 
 
-            <TabControl  Name="tabControl1" >
-                <TabItem Header="tabItem1" Name="tabItem1">
+            <TabControl  x:Name="tabControl1" >
+                <TabItem Header="tabItem1" x:Name="tabItem1">
 
                     <Grid >
                         <DataGrid x:Name = "dgRENTA" FontWeight="Bold" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Показатель\Район">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Площадь посеянная">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Площадь убранная">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты всего">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты на оплату труда">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты на семена">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты на элитные семена">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Минеральные удобрения">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Органические удобрения">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты на средства защиты">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты на электроэнергию">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты на нефтепродукты">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Затраты на страхование">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Содержание основных средств">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Выход продукции всего">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Выход продукции на 1 га" IsReadOnly="True">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Себестоимость всего">
-
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Header="Себестоимость на 1 га"  IsReadOnly="True">
-
-                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Показатель\Район"/>
+                                <DataGridTextColumn Header="Площадь посеянная"/>
+                                <DataGridTextColumn Header="Площадь убранная"/>
+                                <DataGridTextColumn Header="Затраты всего"/>
+                                <DataGridTextColumn Header="Затраты на оплату труда"/>
+                                <DataGridTextColumn Header="Затраты на семена"/>
+                                <DataGridTextColumn Header="Затраты на элитные семена"/>
+                                <DataGridTextColumn Header="Минеральные удобрения"/>
+                                <DataGridTextColumn Header="Органические удобрения"/>
+                                <DataGridTextColumn Header="Затраты на средства защиты"/>
+                                <DataGridTextColumn Header="Затраты на электроэнергию"/>
+                                <DataGridTextColumn Header="Затраты на нефтепродукты"/>
+                                <DataGridTextColumn Header="Затраты на страхование"/>
+                                <DataGridTextColumn Header="Содержание основных средств"/>
+                                <DataGridTextColumn Header="Выход продукции всего"/>
+                                <DataGridTextColumn Header="Выход продукции на 1 га" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Себестоимость всего"/>
+                                <DataGridTextColumn Header="Себестоимость на 1 га"  IsReadOnly="True"/>
                             </DataGrid.Columns>
 
                         </DataGrid>
                     </Grid>
                 </TabItem>
-                <TabItem Header="tabItem2" Name="tabItem2">
+                <TabItem Header="tabItem2" x:Name="tabItem2">
                     <Grid>
-                        <DataGrid x:Name = "dgRENTA2" FontWeight="Bold">
-
-                        </DataGrid>
+                        <DataGrid x:Name = "dgRENTA2" FontWeight="Bold"/>
                     </Grid>
                 </TabItem>
             </TabControl>
@@ -88,22 +93,45 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox >Коэффициент</TextBox>
-                    <TextBox Name="Коэффициент" Grid.Column="1" >0,002</TextBox>
+                    <TextBox Text="Коэффициент" />
+                    <TextBox x:Name="Коэффициент" Grid.Column="1" Text="0,002" />
 
                 </Grid>
-                <Button Name="Calculate" >Пересчитать</Button>
+                <Button x:Name="Calculate" Content="Пересчитать" />
             </WrapPanel>
 
         </StackPanel>
-        <Grid HorizontalAlignment="Left" Width="100" Background="DarkGray" Margin="-75 0 0 0">
-           
-            <StackPanel>
-                <Button Name ="rectangle" Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="21" Content="֍" Margin="76,0,0,0" Click="Rectangle_Click">
+        <Grid x:Name="grid" HorizontalAlignment="Left" Width="100" Background="DarkGray" Margin="-75 0 0 0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
 
-                </Button>
+            <Grid>
 
-            </StackPanel>
+                <StackPanel Name="MENU" Grid.Column="0" Width="78" HorizontalAlignment="Left">
+
+                    <Button Click="Button_Click" Height="40" >
+                        <TextBlock Text="Новый проект"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"/>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Name="OpenCloseMenu" Grid.Column="1" Width="20"  HorizontalAlignment="Right">
+
+                    <Button x:Name ="rectangle2" Visibility="Hidden" Background="{x:Null}"  FontSize="18" Content="֍"  Click="Rectangle_Click" ></Button>
+                    <Button x:Name ="rectangle"  Background="{x:Null}" FontSize="18" Content="֍"  Click="Rectangle_Click" />
+
+
+
+                </StackPanel>
+
+            </Grid>
         </Grid>
     </Grid>
 </Window>
